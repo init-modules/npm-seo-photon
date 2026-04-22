@@ -1,7 +1,7 @@
 {
-	"name": "@init-modules/seo-website-builder",
+	"name": "@init/seo-photon",
 	"version": "0.1.0",
-	"description": "SEO page settings kit for the package-first website builder.",
+	"description": "SEO page settings kit for the package-first photon.",
 	"type": "module",
 	"main": "./src/index.ts",
 	"module": "./src/index.ts",
@@ -10,19 +10,19 @@
 		".": "./src/index.ts"
 	},
 	"peerDependencies": {
-		"@init-modules/seo": "^0.1.0",
-		"@init-modules/website-builder": "^0.1.0",
+		"@init/seo": "^0.1.0",
+		"@init/photon": "^0.1.0",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0"
 	},
 	"devDependencies": {
-		"@init-modules/seo": "file:../seo",
-		"@init-modules/website-builder": "file:../website-builder-foundation/website-builder",
+		"@init/seo": "file:../seo",
+		"@init/photon": "file:../photon-foundation/photon",
 		"@types/react": "^19.2.14",
 		"@types/react-dom": "^19.2.3",
 		"typescript": "^5.9.3"
 	},
-	"websiteBuilder": {
-		"installableKitExport": "seoWebsiteBuilderKit"
+	"photon": {
+		"installableKitExport": "seoPhotonKit"
 	}
 }
