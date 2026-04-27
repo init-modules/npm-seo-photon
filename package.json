@@ -3,11 +3,24 @@
 	"version": "0.1.0",
 	"description": "SEO page settings kit for the package-first photon.",
 	"type": "module",
-	"main": "./src/index.ts",
-	"module": "./src/index.ts",
-	"types": "./src/index.ts",
+	"files": [
+		"dist",
+		"src"
+	],
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"exports": {
-		".": "./src/index.ts"
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"default": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"build": "tsup src/index.ts --format esm --dts --clean",
+		"check:dist": "npm run build && git diff --exit-code -- dist",
+		"prepack": "npm run build"
 	},
 	"peerDependencies": {
 		"@init/seo": "^0.1.0",
@@ -20,6 +33,7 @@
 		"@init/photon": "file:../photon-foundation/photon",
 		"@types/react": "^19.2.14",
 		"@types/react-dom": "^19.2.3",
+		"tsup": "^8.5.0",
 		"typescript": "^5.9.3"
 	},
 	"photon": {
