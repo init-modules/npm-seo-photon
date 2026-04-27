@@ -1,0 +1,7 @@
+{
+	"project_slug": "seo-photon",
+	"name": "@init/seo-photon",
+	"entry_type": "package",
+	"scope": "package:@init/seo-photon",
+	"package_name": "@init/seo-photon"
+}
